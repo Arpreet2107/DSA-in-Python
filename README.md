@@ -12,12 +12,8 @@
 
 This repository contains my complete **Data Structures and Algorithms** learning journey in Python, following the **College Wallah** YouTube course.
 
-Each topic is implemented from scratch with:
+
 - 📜 Clean, commented Python code
-- 🧩 Time and space complexity analysis
-- 🧮 Step-by-step dry runs
-- 🧠 Interview questions & real-world examples
-- 🖼️ Optional visual assets (diagrams, charts)
 
 ---
 
@@ -49,3 +45,4 @@ Each topic is implemented from scratch with:
 ```bash
 git clone https://github.com/<your-username>/DSA-in-Python-by-Arpreet.git
 cd DSA-in-Python-by-Arpreet
+
