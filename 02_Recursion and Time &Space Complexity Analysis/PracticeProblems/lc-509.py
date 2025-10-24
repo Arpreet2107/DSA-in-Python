@@ -24,7 +24,7 @@ class Solution:
         if n == 0 or n == 1: 
             return n 
         #recursive case
-        return self.fib(n-1)+ self.lib(n-2)
+        return self.fib(n-1) + self.lib(n-2)
 # Example usage
 if __name__ == "__main__":  
     sol = Solution()
