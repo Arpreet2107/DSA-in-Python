@@ -2,6 +2,8 @@
 # 🧩 LISTS IN PYTHON — ALL OPERATIONS (ONE SHOT)
 # =====================================================
 
+import copy
+
 # ✅ Creating Lists
 fruits = ["apple", "banana", "cherry"]
 numbers = [4, 1, 7, 3, 9]
@@ -94,12 +96,12 @@ del fruits[0] # delete first element
 print("\nAfter deleting first element:", fruits)
 # ✅ Iterating through List
 for fruit in fruits:
-print("Fruit:", fruit)
+    print("Fruit:", fruit)
 
 # ✅ Iteration & enumerate()
 print("\n--- Iteration ---")
 for index, fruit in enumerate(fruits):
-print(f"Index {index} -> {fruit}")
+    print(f"Index {index} -> {fruit}")
 
 # ✅ Checking membership
 print("Is 'apple' in fruits?", "apple" in fruits)
