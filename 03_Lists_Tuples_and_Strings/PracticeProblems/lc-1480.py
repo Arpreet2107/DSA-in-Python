@@ -18,7 +18,8 @@ def runningSum(self,nums:list[int]) -> list[int]:# function to calculate the run
     ans = []# initialize an empty list to store the running sums
     ans.append(nums[0])# append the first element of nums to ans
     for i in range(1,n):# iterate from the second element to the last element
-        ans.append(ans[i-1] + nums[i])# append the sum of the previous running sum and the current element to ans
+        x = (ans[i-1] + nums[i])# append the sum of the previous running sum and the current element to ans
+        ans.append(x)
     return ans 
 # Example usage:
 nums = [1, 2, 3, 4]
