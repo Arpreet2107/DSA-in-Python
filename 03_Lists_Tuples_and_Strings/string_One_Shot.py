@@ -47,7 +47,7 @@ print("strip() →", text.strip())                          # removes spaces fro
 print("replace('fun', 'awesome') →", text.replace("fun", "awesome"))  # replaces substring
 print("count('n') →", text.count('n'))                     # counts occurrences of 'n'
 print("find('Python') →", text.find("Python"))             # returns index or -1
-print("rfind('n') →", text.rfind('n'))                     # finds last occurrence
+print("rfind('n') →", text.rfind('n'))                     # finds last occurrence 
 print("index('programming') →", text.index("programming")) # same as find() but raises error if not found
 print("rindex('is') →", text.rindex("is"))                 # last index of substring
 
