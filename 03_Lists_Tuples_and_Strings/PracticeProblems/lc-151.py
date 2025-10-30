@@ -7,9 +7,9 @@
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        s = (s.strip()).split()
-        s.reverse()
-        return " ".join(s)
+        s = (s.strip()).split()# Split the string into words after stripping leading/trailing spaces
+        s.reverse()# Reverse the list of words
+        return " ".join(s)# Join the reversed words with a single space
         
 # Example Usage:
 solution = Solution()
