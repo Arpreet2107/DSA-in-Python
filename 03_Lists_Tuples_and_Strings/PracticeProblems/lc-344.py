@@ -9,15 +9,15 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        i = 0
-        j = len(s) - 1
+        i = 0# Initialize the start pointer
+        j = len(s) - 1# Initialize the end pointer
 
-        while i < j:
-            temp = s[i]
-            s[i] = s[j]
-            s[j] = temp  # You forgot to assign s[j]
-            i += 1
-            j -= 1   
+        while i < j:# Loop until the two pointers meet
+            temp = s[i]# Store the value at the start pointer
+            s[i] = s[j]# Assign the value at the end pointer to the start pointer
+            s[j] = temp  # Assign the stored value to the end pointer
+            i += 1# Move the start pointer forward
+            j -= 1   # Move the end pointer backward
 # Example Usage:
 solution = Solution()
 s = ["h", "e", "l", "l", "o"]
