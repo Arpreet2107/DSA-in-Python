@@ -21,7 +21,7 @@ class Solution:
             else:
                 left += 1
 
-
+ 
 # -------------------- MAIN FUNCTION --------------------
 if __name__ == "__main__":
     numbers = [2, 7, 11, 15]   # Sorted input list
