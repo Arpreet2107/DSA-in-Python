@@ -17,7 +17,6 @@ def bst_search(root, key):
             cur = cur.right
     return None  # not found
 
-
 def bst_insert(root, key):
     # Insert and return root (handles empty tree)
     if root is None:
