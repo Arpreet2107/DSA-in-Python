@@ -28,36 +28,29 @@
 # | DFS    | **O(N)** | O(H) recursive stack |
 # | BFS    | **O(N)** | O(W) queue width     |
 
+# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
-        self.val = val      # store node value
-        self.left = left    # left child
-        self.right = right  # right child
+        self.val = val
+        self.left = left
+        self.right = right
 
 
 class Solution:
     def maxDepth(self, root):
-        # If the tree is empty, depth is 0
+        # Base case: Empty tree has depth 0
         if not root:
             return 0
+        
+        # Recursively find the depth of left subtree
+        left_depth = self.maxDepth(root.left)
+        
+        # Recursively find the depth of right subtree
+        right_depth = self.maxDepth(root.right)
+        
+        # Current node contributes +1 to the height
+        return 1 + max(left_depth, right_depth)
 
-        # Recursive function to compute depth
-        def dfs(node):
-            # Base case: if node is None, return 0
-            if not node:
-                return 0
-
-            # Recursively compute left subtree depth
-            left_depth = dfs(node.left)
-
-            # Recursively compute right subtree depth
-            right_depth = dfs(node.right)
-
-            # Current node depth = 1 + maximum of child depths
-            return 1 + max(left_depth, right_depth)
-
-        # Call dfs starting from root
-        return dfs(root)
 # ✅ Approach 2: BFS (Level Order Traversal)
 
 # Also valid. Count how many levels exist.
@@ -65,29 +58,24 @@ from collections import deque
 
 class Solution:
     def maxDepth(self, root):
-        # If tree is empty
         if not root:
             return 0
-
-        queue = deque([root])  # queue to perform level-order traversal
-        depth = 0              # track levels
-
-        # While there are nodes to process
+        
+        queue = deque([root])
+        depth = 0
+        
+        # Level order traversal
         while queue:
-            level_size = len(queue)  # number of nodes in current level
-            depth += 1               # increase depth for each level
-
-            # Process all nodes in this level
+            depth += 1
+            level_size = len(queue)
+            
+            # Traverse all nodes in this level
             for _ in range(level_size):
-                node = queue.popleft()    # remove from queue
-
-                # Push left child if exists
+                node = queue.popleft()
+                
                 if node.left:
                     queue.append(node.left)
-
-                # Push right child if exists
                 if node.right:
                     queue.append(node.right)
-
-        # Depth after processing all levels
+        
         return depth
