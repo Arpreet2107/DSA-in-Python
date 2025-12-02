@@ -75,3 +75,31 @@ class Solution:
 
         # Return the list of right side view values
         return result
+# 🔥 Alternative Approach: DFS (Right-first)
+# Idea
+
+# Visit right child first, then left.
+
+# First time you reach a level = the rightmost node of that level.
+
+# Code (Optional)
+class Solution:
+    def rightSideView(self, root):
+
+        def dfs(node, level):
+            # If node is None → return
+            if not node:
+                return
+
+            # If visiting this level for the first time, add this node
+            if level == len(result):
+                result.append(node.val)
+
+            # First visit right child (because we need right side)
+            dfs(node.right, level + 1)
+            # Then visit left child
+            dfs(node.left, level + 1)
+
+        result = []
+        dfs(root, 0)
+        return result
